@@ -24,7 +24,7 @@
                             <h1>Phở ngon cung đình, tâm tình với bạn</h1>
                             <p>Nước dùng đậm đà , sợi phở tươi ngon</p>
                             <p>chất lượng tốt</p>
-                            <button><a href="#">Order now</a></button>
+                            <button><a href="">Order now</a></button>
                         </div>
                         <div class="show-right">
                             <img src="{{ asset('img/slide.png') }}" alt="">
@@ -124,18 +124,8 @@
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos dicta dolorem explicabo fuga labore officiis accusamus ipsum sequi cumque nobis.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="title-access">
-                        <div class="infor-user">
-                            <img src="{{ asset('img/shiper_avt.jpg') }}" alt="">
-                            <h1>Đàm Công Minh</h1>
-                        </div>
-                        <div class="detail-access">
-                            <img src="{{ asset('img/shiper_avt.jpg') }}" alt="">
-                            <div class="access-conment">
-                                <h1>Đàm Công Minh</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos dicta dolorem explicabo fuga labore officiis accusamus ipsum sequi cumque nobis.</p>
-                            </div>
+                        <div class="btn-home">
+                            <div class="home-ip"></div>
                         </div>
                     </div>
                     <div class="title-access">
@@ -150,6 +140,9 @@
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos dicta dolorem explicabo fuga labore officiis accusamus ipsum sequi cumque nobis.</p>
                             </div>
                         </div>
+                        <div class="btn-home">
+                            <div class="home-ip"></div>
+                        </div>
                     </div>
                     <div class="title-access">
                         <div class="infor-user">
@@ -162,12 +155,36 @@
                                 <h1>Đàm Công Minh</h1>
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos dicta dolorem explicabo fuga labore officiis accusamus ipsum sequi cumque nobis.</p>
                             </div>
+                        </div>
+                        <div class="btn-home">
+                            <div class="home-ip"></div>
+                        </div>
+                    </div>
+                    <div class="title-access">
+                        <div class="infor-user">
+                            <img src="{{ asset('img/shiper_avt.jpg') }}" alt="">
+                            <h1>Đàm Công Minh</h1>
+                        </div>
+                        <div class="detail-access">
+                            <img src="{{ asset('img/shiper_avt.jpg') }}" alt="">
+                            <div class="access-conment">
+                                <h1>Đàm Công Minh</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos dicta dolorem explicabo fuga labore officiis accusamus ipsum sequi cumque nobis.</p>
+                            </div>
+                        </div>
+                        <div class="btn-home">
+                            <div class="home-ip"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-------------- js của trang home ---------------->
+        <script src="{{ url('js/home.js') }}"></script>
     </section>
-    <script src="{{ url('js/home.js') }}"></script>
+
+
+<!-------------- Footer của trang home ---------------->
+    @include('layout.footer')
 </body>
 </html>

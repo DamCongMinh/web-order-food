@@ -78,23 +78,60 @@ function toggleFilter() {
     updatePrice();
 }
 
-
+// Lấy địa chỉ
 document.addEventListener("DOMContentLoaded", function () {
-    const locationFilter = document.getElementById("location-filter");
+    const provinceFilter = document.getElementById("province-filter");
+    const districtFilter = document.getElementById("district-filter");
+    const wardFilter = document.getElementById("ward-filter");
 
     // Gọi API để lấy danh sách tỉnh/thành phố
-    fetch("https://provinces.open-api.vn/api/?depth=2")
-        .then(response => response.json()) // Chuyển dữ liệu thành JSON
+    fetch("https://provinces.open-api.vn/api/?depth=3")
+        .then(response => response.json())
         .then(data => {
             data.forEach(province => {
                 let option = document.createElement("option");
-                option.value = province.code;  // Dùng mã tỉnh làm value
-                option.textContent = province.name;  // Hiển thị tên tỉnh
-                locationFilter.appendChild(option); // Thêm vào select
+                option.value = province.code;
+                option.textContent = province.name;
+                provinceFilter.appendChild(option);
+            });
+
+            // Sự kiện thay đổi tỉnh/thành phố
+            provinceFilter.addEventListener("change", function () {
+                districtFilter.innerHTML = '<option value="all">Tất cả</option>'; // Reset huyện
+                wardFilter.innerHTML = '<option value="all">Tất cả</option>'; // Reset xã
+
+                let selectedProvince = data.find(p => p.code == this.value);
+                if (selectedProvince) {
+                    selectedProvince.districts.forEach(district => {
+                        let option = document.createElement("option");
+                        option.value = district.code;
+                        option.textContent = district.name;
+                        districtFilter.appendChild(option);
+                    });
+                }
+            });
+
+            // Sự kiện thay đổi huyện/quận
+            districtFilter.addEventListener("change", function () {
+                wardFilter.innerHTML = '<option value="all">Tất cả</option>'; // Reset xã
+
+                let selectedProvince = data.find(p => p.code == provinceFilter.value);
+                if (selectedProvince) {
+                    let selectedDistrict = selectedProvince.districts.find(d => d.code == this.value);
+                    if (selectedDistrict) {
+                        selectedDistrict.wards.forEach(ward => {
+                            let option = document.createElement("option");
+                            option.value = ward.code;
+                            option.textContent = ward.name;
+                            wardFilter.appendChild(option);
+                        });
+                    }
+                }
             });
         })
-        .catch(error => console.error("Lỗi khi lấy dữ liệu tỉnh/thành phố:", error));
+        .catch(error => console.error("Lỗi khi lấy dữ liệu:", error));
 });
+
 
 
 

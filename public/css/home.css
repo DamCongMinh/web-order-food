@@ -1,13 +1,22 @@
 
 body {
+    width: 100%;
+    height: auto;
     background-color: #f5f5f5;
-    height: 50000px;
+    display: flex;
+    flex-direction: column; 
+    margin: 0; /* Loại bỏ margin mặc định */
+    gap: 100px;
+}
+
+#home_body {
+    flex: 1; /* Chiếm hết phần trống còn lại */
 }
 
 /* Định dạng phần container chính */
 .body_container {
     width: 100%;
-    height: 95vh;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -19,7 +28,7 @@ body {
 .home-slide {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 90vh;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -43,24 +52,43 @@ body {
 }
 
 .show-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 1;
     margin-left: 50px;
     color: #333;
     padding: 20px;
+    gap: 70px;
 }
 
 .show-left h1 {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 2.8rem;
+}
+  
+.show-left h1,
+.show-left p {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: none;
 }
 
 .show-left p {
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: 1.5rem;
 }
+  
+@keyframes typing {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+  
+  
 
 /* Style cho button "Order now" */
 .show-left button {
+    width: 30%;
     background: #ff6600;
     color: white;
     border: none;
@@ -70,7 +98,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     margin-top: 15px;
-    transition: background 0.3s ease-in-out, transform 0.2s;
+    transition: 0.3s ease-in-out, transform 0.2s;
     opacity: 1; /* Ban đầu ẩn để có hiệu ứng */
 }
 
@@ -317,28 +345,55 @@ body {
 
 /* Container chính */
 .title-access {
-    width: 450px;
-    height: 650px;
+    width: 450px; /* Độ rộng giống điện thoại */
+    height: 800px; /* Độ cao dài hơn để cân đối */
     margin-top: 24px;
-    border-radius: 20px;
-    border: 2px solid #000;
+    border-radius: 40px; /* Bo góc giống điện thoại */
+    border: 4px solid #000; /* Viền đen như khung máy */
+    background: #fff; /* Màu nền */
     display: flex;
     flex-direction: column;
     gap: 10px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Bóng đổ giống máy thật */
+    position: relative;
+    overflow: hidden; /* Ẩn phần thừa nếu có */
 }
 
-/* Phần thông tin user trên cùng */
+/* Khi hover vào, làm hiệu ứng nổi lên */
+.title-access:hover {
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px); /* Nhấc nhẹ lên */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mô phỏng camera trước của điện thoại */
+.title-access::before {
+    content: "";
+    width: 100px;
+    height: 20px;
+    background: #222;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+/* Định dạng phần thông tin user trên cùng */
 .infor-user {
     display: flex;
     align-items: center;
-    gap: 8px;
+    padding: 15px;
+    gap: 12px;
+    background: #f5f5f5;
+    border-bottom: 2px solid #ddd;
 }
 
 /* Ảnh đại diện */
-.infor-user img, .detail-access img {
-    width: 100px;
-    height: 100px;
+.infor-user img, 
+.detail-access img {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -354,20 +409,21 @@ body {
 /* Hộp chat bên dưới */
 .detail-access {
     width: 100%;
-    height: auto;
     display: flex;
     align-items: start;
+    padding: 15px;
+    gap: 12px;
     background: #f1f3f5; /* Màu nền nhẹ */
-    border-radius: 18px;
-    padding: 8px 12px;
-    gap: 10px;
+    border-radius: 20px;
 }
 
 /* Nội dung bình luận */
 .access-conment {
     display: flex;
-    text-align: left;
     flex-direction: column;
+    background: #dad3d3;
+    padding: 12px;
+    border-radius: 12px;
 }
 
 /* Tên user trong bình luận */
@@ -380,14 +436,34 @@ body {
 
 /* Nội dung comment */
 .access-conment p {
-    padding: 8px;
-    background-color: #dad3d3;
-    font-size: 1.1rem;
-    border-radius: 15px;
-    color: black;
-    margin: 3px 0 0 0;
-    text-align: left;
+    font-size: 1rem;
     line-height: 1.4;
+    color: black;
+    margin: 5px 0 0;
 }
 
+.btn-home {
+    width: 60px;
+    height: 60px;
+    background-color: #464040;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 400px;
+    margin-left: 42%;
+    box-shadow: 0px 5px 15px rgba(136, 128, 122, 0.4); 
+}
 
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.home-ip {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    border: #bfb7b7 1px solid;
+}

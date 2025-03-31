@@ -88,11 +88,25 @@
                 
                     <!-- Lọc theo địa chỉ -->
                     <div class="filter-type">
-                        <label for="">Danh mục loại đồ ăn :</label>
-                        <select id="location-filter">
-                            <option value="all"></option>
+                        <label for="province-filter">Tỉnh/Thành phố:</label>
+                        <select id="province-filter">
+                            <option value="all">Tất cả</option>
                         </select>
                     </div>
+                    
+                    <div class="filter-type">
+                        <label for="district-filter">Quận/Huyện:</label>
+                        <select id="district-filter">
+                            <option value="all">Tất cả</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-type">
+                        <label for="ward-filter">Phường/Xã:</label>
+                        <select id="ward-filter">
+                            <option value="all">Tất cả</option>
+                        </select>
+                    </div>                    
                 
                     <!-- Lọc theo giá tiền -->
                     <div class="filter-cost">
@@ -345,12 +359,130 @@
                 </div>
                 
             </div>
-            <div>
-                <h1>thằng ngu không biết đánh game</h1>
+            <div class="more-products">
+                <h1>Các sản phẩm tương tự</h1>
+                <div class="list-products">
+                    <div class="title-list">
+                        <div class="list-show">
+                            <img src="{{ asset('img/slide2.jpg') }}" alt="">
+                            <div class="show-cart">
+                                {{-- <p><i class="fa-solid fa-heart"></i></p> --}}
+                                <p><i class="fa-solid fa-cart-shopping"></i></p>
+                            </div>
+                            <div class="show-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                                <div class="title-detail">
+                                    <div class="detail-cost">
+                                        <p class="old-cost">Giá cũ: 40.000đ</p>
+                                        <p class="new-cost">Giá mới: 26.000đ</p>
+                                    </div>
+                                    <div class="title-access">Đánh giá: 
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i> 
+                                        </p>                
+                                        <p>4.5/5</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title-list">
+                        <div class="list-show">
+                            <img src="{{ asset('img/slide2.jpg') }}" alt="">
+                            <div class="show-cart">
+                                {{-- <p><i class="fa-solid fa-heart"></i></p> --}}
+                                <p><i class="fa-solid fa-cart-shopping"></i></p>
+                            </div>
+                            <div class="show-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                                <div class="title-detail">
+                                    <div class="detail-cost">
+                                        <p class="old-cost">Giá cũ: 40.000đ</p>
+                                        <p class="new-cost">Giá mới: 26.000đ</p>
+                                    </div>
+                                    <div class="title-access">Đánh giá: 
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i> 
+                                        </p>                
+                                        <p>4.5/5</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title-list">
+                        <div class="list-show">
+                            <img src="{{ asset('img/slide2.jpg') }}" alt="">
+                            <div class="show-cart">
+                                {{-- <p><i class="fa-solid fa-heart"></i></p> --}}
+                                <p><i class="fa-solid fa-cart-shopping"></i></p>
+                            </div>
+                            <div class="show-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                                <div class="title-detail">
+                                    <div class="detail-cost">
+                                        <p class="old-cost">Giá cũ: 40.000đ</p>
+                                        <p class="new-cost">Giá mới: 26.000đ</p>
+                                    </div>
+                                    <div class="title-access">Đánh giá: 
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i> 
+                                        </p>                
+                                        <p>4.5/5</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title-list">
+                        <div class="list-show">
+                            <img src="{{ asset('img/slide2.jpg') }}" alt="">
+                            <div class="show-cart">
+                                {{-- <p><i class="fa-solid fa-heart"></i></p> --}}
+                                <p><i class="fa-solid fa-cart-shopping"></i></p>
+                            </div>
+                            <div class="show-title">
+                                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                                <div class="title-detail">
+                                    <div class="detail-cost">
+                                        <p class="old-cost">Giá cũ: 40.000đ</p>
+                                        <p class="new-cost">Giá mới: 26.000đ</p>
+                                    </div>
+                                    <div class="title-access">Đánh giá: 
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i> 
+                                        </p>                
+                                        <p>4.5/5</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div> 
         </div>
     </section>
 
-    <script src="{{ url('js/detail-product.js') }}"></script>
+    <script src="{{ url('js/list-products.js') }}"></script>
 </body>
 </html>

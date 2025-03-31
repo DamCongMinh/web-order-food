@@ -11,7 +11,7 @@ Route::get('shiper', [
 Route::get('home', [ 
     ShiperController::class,
     'home'
-]);
+])->name('home');
 
 Route::get('login', [ 
     ShiperController::class,
@@ -20,5 +20,10 @@ Route::get('login', [
 
 Route::get('list-product', [ 
     ShiperController::class,
-    'list'
+    'products'
+])->name('list-product');
+
+Route::get('footer', [ 
+    ShiperController::class,
+    'footer'
 ]);

@@ -14,7 +14,7 @@
         <div class="header_container">
             <div class="header_left">
                 <div class="header_left--logo">
-                    <img src="{{ asset('img/logo.png') }}" alt="">
+                    <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" alt=""></a>
                 </div>
             </div>
 
