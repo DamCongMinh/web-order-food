@@ -23,7 +23,7 @@ Route::get('list-product', [
     'products'
 ])->name('list-product');
 
-Route::get('footer', [ 
+Route::get('detail-product', [ 
     ShiperController::class,
-    'footer'
-]);
+    'detail'
+])->name('detail');

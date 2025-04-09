@@ -327,6 +327,7 @@ body {
 }
 
 .home-access {
+    background-color: #ada5a5;
     display: flex;
     flex-wrap: wrap;
     flex-direction: none;

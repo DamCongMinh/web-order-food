@@ -23,7 +23,7 @@ class ShiperController extends Controller
         return view('web.list-product');
     }
 
-    public function footer (){
-        return view('layout.footer');
+    public function detail (){
+        return view('web.detail_product');
     }
 }
