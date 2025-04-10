@@ -33,3 +33,20 @@
 .product-title p {
     font-size: 1.2rem;
 }
+
+body::-webkit-scrollbar {
+    width: 12px;                /* Độ rộng thanh cuộn */
+}
+  
+body::-webkit-scrollbar-track {
+    background: #f0f0f0;       /* Màu nền đường trượt */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: #888;          /* Màu thanh cuộn */
+    border-radius: 10px;       /* Bo tròn góc */
+}
+  
+body::-webkit-scrollbar-thumb:hover {
+    background: #555;          /* Màu khi hover */
+}

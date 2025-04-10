@@ -294,12 +294,9 @@ input[type="range"]:active::-webkit-slider-thumb {
     font-size: 18px;
 }
 
-
-
 /*  Sản phẩm */
 
-.products .products-title,
-.more-products .list-products {
+.list-products {
     width: 100%;
     display: flex;
     text-align: center;
@@ -485,3 +482,26 @@ input[type="range"]:active::-webkit-slider-thumb {
     transition: 0.3s ease;
 }
 
+/* phân trang  */
+.pagination {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+  
+.page-btn {
+    background: white;
+    border: 1px solid #ccc;
+    margin: 3px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+  
+.page-btn:hover {
+    background: #ee4d2d;
+    color: white;
+    border-color: #ee4d2d;
+}

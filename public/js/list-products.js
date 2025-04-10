@@ -132,7 +132,43 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Lỗi khi lấy dữ liệu:", error));
 });
 
+// phân trang cho list-product   
 
+// Giả lập danh sách đánh giá (bạn có thể thay bằng dữ liệu từ server)
+document.addEventListener('DOMContentLoaded', function () {
+  const productsPage = 6;
+  const listProducts = document.querySelector('.list-products');
+  const title = listProducts.querySelectorAll('.title-list');
+  const paginationButtons = document.querySelectorAll('.page-btn');
+
+  function showPage(page) {
+      const start = (page - 1) * productsPage;
+      const end = start + productsPage;
+
+      title.forEach((title, index) => {
+          if (index >= start && index < end) {
+              title.style.display = 'block';
+          } else {
+              title.style.display = 'none';
+          }
+      });
+
+      // Highlight current button
+      paginationButtons.forEach(btn => btn.classList.remove('active'));
+      const currentBtn = document.querySelector(`.page-btn[data-page="${page}"]`);
+      if (currentBtn) currentBtn.classList.add('active');
+  }
+
+  paginationButtons.forEach(button => {
+      button.addEventListener('click', function () {
+          const page = parseInt(this.dataset.page);
+          showPage(page);
+      });
+  });
+
+    // Mặc định load trang đầu tiên
+  showPage(1);
+});
 
 
 

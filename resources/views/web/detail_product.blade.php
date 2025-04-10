@@ -41,47 +41,81 @@
                 <div class="descripttion">Mo ta :
                     <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias recusandae eos temporibus molestiae dolore non deleniti ipsam adipisci debitis accusantium ipsum, at impedit molestias tempora, autem ullam quasi. Blanditiis, illum.</p>
                 </div>
-                <div class="cost">
-                    <p class="old-price">Giá sản phẩm: <span>$100</span></p>
-                    <p class="new-price">Giá sản phẩm: <span>$80</span></p>
-                </div>
-                
-                <div class="amount">
-                    <label for="quantity">Số lượng sản phẩm:</label>
-                    <button class="decrease">-</button>
-                    <input type="number" id="quantity" value="1" min="1" max="100">
-                    <button class="increase">+</button>
-                </div>
-                
-                <div class="total-payouts">
-                    <p>Tổng tiền cần thanh toán: <span id="total-amount">$80</span></p>
-                </div>                               
-                <div class="access">Đánh giá :
-                    <p class="access">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i> 
-                    </p>
-                </div>
-                <div class="btn-nav">
-                    <button class="btn-add">Thêm vào giỏ hàng</button>                
-                    <button class="btn-buy"> Mua hàng</button>
-                </div>
-                <div class="coupon-card">
-                    <div class="coupon-header">
-                        <h2>GIẢM 20%</h2>
-                        <p>Áp dụng cho đơn hàng từ 200K</p>
+                <div class="title">
+                    <div class="title-left">
+                        <div class="cost">Giá Sản Phẩm :
+                            <p class="old-price">Giá Cũ: <span>$100</span></p>
+                            <p class="new-price">Giá Mới: <span>$80</span></p>
+                        </div>
+                        
+                        <div class="size">
+                            <p class="size-title">Size:</p>
+                            <div class="size-list">
+                                <div class="size-item">
+                                    <input type="button" id="size1" name="size" value="S">
+                                    <input type="button" id="size1" name="size" value="M">
+                                    <input type="button" id="size1" name="size" value="L">
+                                    <input type="button" id="size1" name="size" value="XL">
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="amount">
+                            <label for="quantity">Số lượng sản phẩm:</label>
+                            <button class="decrease">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="100">
+                            <button class="increase">+</button>
+                        </div>
+                        
+                        <div class="total-payouts">
+                            <p>Tổng tiền cần thanh toán: <span id="total-amount">$80</span></p>
+                        </div>                               
+                        <div class="btn-nav">
+                            <button class="btn-add">Thêm vào giỏ hàng</button>                
+                            <button class="btn-buy"> Mua hàng</button>
+                        </div>
                     </div>
-                    <div class="coupon-body">
-                        <span class="coupon-code">SALE20</span>
-                        <button class="copy-btn" onclick="copyCoupon('SALE20')">Sao chép</button>
+                    <div class="title-right">
+                        <div class="coupon-card">
+                            <div class="coupon-header">
+                                <h2>GIẢM 20%</h2>
+                                <p>Áp dụng cho đơn hàng từ 200K</p>
+                            </div>
+                            <div class="coupon-body">
+                                <span class="coupon-code">SALE20</span>
+                                <button class="copy-btn" onclick="copyCoupon('SALE20')">Sao chép</button>
+                            </div>
+                            <div class="coupon-footer">
+                                <p>Hạn dùng: 31/12/2025</p>
+                            </div>
+                        </div> 
+                        <div class="coupon-card">
+                            <div class="coupon-header">
+                                <h2>GIẢM 20%</h2>
+                                <p>Áp dụng cho đơn hàng từ 200K</p>
+                            </div>
+                            <div class="coupon-body">
+                                <span class="coupon-code">SALE20</span>
+                                <button class="copy-btn" onclick="copyCoupon('SALE20')">Sao chép</button>
+                            </div>
+                            <div class="coupon-footer">
+                                <p>Hạn dùng: 31/12/2025</p>
+                            </div>
+                        </div> 
+                        <div class="coupon-card">
+                            <div class="coupon-header">
+                                <h2>GIẢM 20%</h2>
+                                <p>Áp dụng cho đơn hàng từ 200K</p>
+                            </div>
+                            <div class="coupon-body">
+                                <span class="coupon-code">SALE20</span>
+                                <button class="copy-btn" onclick="copyCoupon('SALE20')">Sao chép</button>
+                            </div>
+                            <div class="coupon-footer">
+                                <p>Hạn dùng: 31/12/2025</p>
+                            </div>
+                        </div> 
                     </div>
-                    <div class="coupon-footer">
-                        <p>Hạn dùng: 31/12/2025</p>
-                    </div>
-                </div>                    
+                </div>                   
             </div>
         </div>
         <div class="info-restaurant">
@@ -372,7 +406,7 @@
                 <button class="page-btn" data-page="1">1</button>
                 <button class="page-btn" data-page="2">2</button>
                 <button class="page-btn" data-page="3">3</button>
-              </div>
+            </div>
               
         </div>   
     </section>

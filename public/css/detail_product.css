@@ -116,8 +116,6 @@
     right: 5px;
 }
 
-
-
 /* ================== Chi tiết sản phẩm ================== */
 .detail-product {
     width: calc(40% - 24px);
@@ -132,12 +130,36 @@
     margin-bottom: 10px;
 }
 
+.restaurant,
+.descripttion,
+.cost,
+.size p ,
+.amount {
+    font-size: 1.4rem;
+}
+
 .name-restaurant, 
 .description {
     color: #666;
-    font-size: 14px;
+    font-size: 1.3rem;
     line-height: 1.5;
     margin-left: 15px;
+}
+
+.name-restaurant p, 
+.description p {
+    font-size: 1.2rem;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    margin-top: 26px;
+}
+
+.title-left {
+    width: 60%;
+    gap: 24px;
 }
 
 /* Giá sản phẩm */
@@ -161,8 +183,40 @@
     color: #ff5733;
 }
 
+.size {
+    display: flex;
+    text-align: center;
+}
+
+.size p {
+    line-height: 44px;
+}
+
+.size-list {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 46px;
+    gap: 16px;
+}
+
+.size-list input {
+    padding: 10px 36px;
+    font-size: 1.2rem;
+}
+
+.size-list input:hover {
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
 /* Số lượng sản phẩm */
 .amount {
+    margin-top: 24px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -198,34 +252,38 @@
 }
 
 .total-payouts {
-    width: 50%;
+    width: 80%;
     margin-top: 20px;
     padding: 15px;
-    background-color: #f9f9f9; /* Màu nền sáng để làm nổi bật */
-    border: 1px solid #ddd; /* Viền mỏng màu xám */
-    border-radius: 8px; /* Bo góc cho các cạnh */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ cho phần tử */
-    font-family: 'Arial', sans-serif; /* Chọn phông chữ dễ đọc */
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    font-family: 'Arial', sans-serif; 
 }
 
 .total-payouts p {
     font-size: 18px;
-    color: #333; /* Màu chữ tối cho sự rõ ràng */
+    color: #333; 
     margin: 0;
 }
 
 .total-payouts span {
-    font-weight: bold; /* Làm chữ tổng tiền đậm */
-    color: #e74c3c; /* Màu đỏ cho tổng tiền */
-    font-size: 20px; /* Tăng cỡ chữ cho tổng tiền */
+    font-weight: bold; 
+    color: #e74c3c; 
+    font-size: 20px; 
 }
 
-
-/* Đánh giá sao */
-.access {
-    font-size: 18px;
-    color: #ff9800;
-    margin: 10px 0;
+.title-right {
+    width: 40%;
+    height: 400px;
+    overflow-y: auto;
+    background-color: #d2caca;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    border: 1px solid #000;
 }
 
 /* ================== Thẻ mã giảm giá ================== */
@@ -240,7 +298,6 @@
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    margin: auto;
 }
 
 .coupon-header h2 {
@@ -436,9 +493,49 @@
     border-radius: 8px;
   }
   
-.header-review {
+.header-comment {
     width: 100%;
+    margin: 30px 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
 }
+  
+.rating-summary {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+  
+.average-rating .score {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ee4d2d;
+}
+  
+.stars {
+    color: #ee4d2d;
+    font-size: 16px;
+}
+  
+.rating-filters button {
+    margin: 5px;
+    padding: 8px 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.rating-filters button:hover {
+    background: #fef0ef;
+    border-color: #ee4d2d;
+    color: #ee4d2d;
+}
+  
   
 .review-list {
     width: 100%;
@@ -529,14 +626,15 @@
 }
 
   
-  /* phân trang  */
+/* phân trang  */
   .pagination {
     width: 100%;
     display: flex;
     text-align: center;
-  }
+    justify-content: center;
+}
   
-  .page-btn {
+.page-btn {
     background: white;
     border: 1px solid #ccc;
     margin: 3px;
@@ -544,11 +642,11 @@
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.2s ease;
-  }
+}
   
-  .page-btn:hover {
+.page-btn:hover {
     background: #ee4d2d;
     color: white;
     border-color: #ee4d2d;
-  }
+}
   

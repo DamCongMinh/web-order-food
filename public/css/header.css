@@ -167,9 +167,6 @@ html {
     border-radius: 15px;
 }
 
-
-
-
 .header_right {
     width: 40%;
     height: 100%;
@@ -188,10 +185,10 @@ html {
 .search-icon {
     width: 30px;
     background-color: #fff;
-    padding-right: 8px;
+    padding: 0 26px;
     border-right: 2px solid #000;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 }
 .search-icon i {
@@ -212,7 +209,7 @@ html {
     padding: 8px 12px;
     border: none;
     outline: none;
-
+    font-size: 1.2rem;
 }
 
 .header_right--email {
